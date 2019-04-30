@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> düster und gefährlich</title>
+    <!-- <link rel="stylesheet" href="./../style/style.css">-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+        @import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+        body {
+            position: fixed;
+            margin: 0;
+            background-color: rgb(21, 24, 35)
+        }
+
+        nav {
+            font-family: Dokdo;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            overflow: none;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        .nachRechts {
+            float: right;
+        }
+
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: flex;
+            transition: 0.2s;
+        }
+
+        nav li a:hover {
+            font-size: 2em;
+        }
+
+        main {
+            margin: 5em 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            justify-content: space-around;
+        }
+
+        #briefborder {
+            background-color: #fff;
+            overflow: auto;
+            height: 70vh;
+            border: 1px solid #000;
+            padding: 1em;
+
+        }
+
+        #brief {}
+
+        .container {
+            padding: 1em;
+            margin: 1em;
+            display: flex;
+            background-color: rgb(21, 24, 35);
+        }
+
+        #anschrift p,
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .beschreibung {
+
+            color: rgb(217, 215, 172);
+            min-width: 350px;
+            max-width: 40%;
+            padding: 1em;
+            font-family: Lato;
+        }
+
+        .beschreibung h1 {
+            font-family: 'Reenie Beanie';
+            color: rgb(223, 64, 64);
+            font-size: 3em;
+
+        }
+
+        .activ {
+            color: rgb(223, 64, 64);
+        }
+
+        table,
+        th,
+        td {
+            font-family: 'Reenie Beanie';
+            font-size: 1.25em;
+            color: rgb(223, 64, 64);
+            border: 1px solid #fff;
+            ;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        th {
+            font-family: 'Dokdo';
+            font-size: 1.5em;
+        }
+
+        td:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .leer {
+            border: none;
+        }
+
+        .leer:hover {
+            background-color: rgb(21, 24, 35);
+            ;
+        }
+
+        /* Style der drei buttons zum auswählen der designs*/
+        .button {
+            font-family: 'Dokdo';
+            cursor: pointer;
+            font-size: 1.25em;
+            padding: 0.5em;
+            margin: 1em;
+            background-color: black;
+            border: none;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        .button span a,
+        .button p {
+            text-decoration: none;
+            color: rgb(223, 64, 64);
+            ;
+            transition: 0.5s;
+        }
+
+        .button span a:active {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span {
+
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            color: rgb(223, 64, 64);
+            ;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li> <a class="activ" href="index.html"> Home</a></li>
+                <li> <a href="steckbrief.html"> Steckbrief</a></li>
+                <li> <a href="meinBrief.html"> Mein Brief</a></li>
+                <li> <a href="stundenplan.html"> Stundenplan</a></li>
+                <li> <a href="kontaktdaten.html"> Kontaktdaten</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="beschreibung">
+            <h1> Willkommen bei nach eigenen Vorstellungen gestaltete Webseite</h1>
+
+            <section>
+                <p> Ich habe für mein Text als schriftart Lato von Google fonts gewählt
+                    da es eine sehr klare und gut lesbare schrift ist.
+
+
+                </p>
+                <p>
+
+                    Ich habe für navigationsbar eine sehr relativ dunkles grau genommen
+                    um einen guten kontrast zubekommen.
+
+                    Für die bessere Lesbarkeit habe ich Großbuchstaben und
+                    ein kleinen platz zwischen den buchstabengelassen.
+
+
+                </p>
+                <div>
+                    <button class="button">
+                        <span> <a href="./../../version1_romantik/view/index.html">verspielt & romantisch</a></span>
+                    </button>
+                    <button class="button">
+                        <span> <a href="./../../version2_duester/view/index.html">düster und gefährlich</a> </span>
+                    </button>
+                    <button class="button">
+                        <span><a href="./../../index.html"> selbst gestaltet</a> </span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

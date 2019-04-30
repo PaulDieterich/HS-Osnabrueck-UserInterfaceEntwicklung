@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Paul Dieterich">
+    <title> verspielt und romantisch</title>
+    <!--<link rel="stylesheet" href="./../style/style.css"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+        @import url('https://fonts.googleapis.com/css?family=Neucha');
+
+        body {
+            position: fixed;
+            margin: 0;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-around;
+            margin: 4vh 3vw 3vh 3vw;
+            height: 93vh;
+            width: 94vw;
+            background-color: #fffce9
+        }
+
+        nav {
+            font-family: 'Open Sans Condensed';
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            overflow: none;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: flex;
+            transition: 0.2s;
+        }
+
+        nav li:nth-child(1):hover {
+            background: rgb(99, 1, 1);
+
+        }
+
+        nav li:nth-child(2):hover {
+            background: rgb(99, 89, 1);
+
+        }
+
+        nav li:nth-child(3):hover {
+            background: rgb(1, 99, 6);
+
+        }
+
+        nav li:nth-child(4):hover {
+            background: rgb(1, 96, 99);
+
+        }
+
+        nav li:nth-child(5):hover {
+            background: rgb(60, 1, 99);
+
+        }
+
+        nav li a:hover {
+            font-size: 2em;
+        }
+
+
+        .activ {
+            color: rgba(255, 72, 112, 0.822);
+        }
+
+        main {
+            background-image: linear-gradient(to top, #f54291, #ff78ae, #ffa0d2);
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        #briefborder {
+            background-color: #fff;
+            overflow: auto;
+            height: 70vh;
+            border: 1px solid #000;
+            padding: 1em;
+        }
+
+        .container {
+            padding: 1em;
+            margin: 1em;
+            background-color: #fffce9
+        }
+
+        #anschrift p,
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .beschreibung {
+            color: rgb(0, 0, 0);
+            min-width: 350px;
+            max-width: 40%;
+            padding: 1em;
+            font-family: Lato;
+        }
+
+        .beschreibung h1 {
+            font-family: 'Neucha';
+            color: #000;
+
+
+        }
+
+
+        table,
+        th,
+        td {
+            font-family: 'Lato';
+
+            color: #000;
+            border: 1px solid rgb(61, 61, 61);
+            ;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        th {
+            font-family: 'Neucha';
+            font-size: 1.5em;
+        }
+
+        td:hover {
+            color: #fff;
+        }
+
+        .MATH1:hover {
+            background-color: #F12B6B
+        }
+
+        .PROG1:hover {
+            background-color: #FF467E
+        }
+
+        .GUI:hover {
+            background-color: #FD94B4
+        }
+
+        .TGMI:hover {
+            background-color: #F6C7C7
+        }
+
+        .leer {
+            border: none;
+        }
+
+        .leer:hover {
+            color: black;
+            background-color: #fffce9
+        }
+
+        #lieblingsfach {
+            padding: 0.5em;
+            margin: 0.1em;
+            background: rgb(1, 96, 99);
+        }
+
+        /* Style der drei buttons zum auswählen der designs*/
+
+        #buttonGruppe .button:nth-child(1) {
+            background: rgb(99, 1, 1);
+        }
+
+        #buttonGruppe .button:nth-child(2) {
+            background: rgb(99, 89, 1);
+        }
+
+        #buttonGruppe .button:nth-child(3) {
+            background: rgb(1, 96, 99);
+        }
+
+        .button {
+            font-family: 'Open Sans Condensed';
+            cursor: pointer;
+            font-size: 1.25em;
+            padding: 0.5em;
+            margin: 1em;
+            border: none;
+            outline: none;
+
+        }
+
+        .button span a,
+        .button p {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span a:active {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span {
+
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            color: #000;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li> <a href="index.html"> Home</a></li>
+                <li> <a href="steckbrief.html"> Steckbrief</a></li>
+                <li> <a class="activ" href="meinBrief.html"> Mein Brief</a></li>
+                <li> <a href="stundenplan.html"> Stundenplan</a></li>
+                <li> <a href="kontaktdaten.html"> Kontaktdaten</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="container">
+                <div id="briefborder">
+                    <div id="brief">
+
+
+                        <p> <strong> Paul Dieterich</strong> <br>
+                            Schaumburger Straße 50<br>
+                            Bremen</p>
+
+                        <p> <strong> mail: <a href="mailto:paul.dieterich@hs-osnbabrueck.de"> Meine Email Adresse</a>
+                            </strong>
+                        </p>
+
+                        <br><br> <br>
+
+                        <p> <strong> Bettina Kuhlmann</strong><br>
+                            IxD lab, Room SD-108<br>
+                            Albrechtstr. 30<br>
+                            D-49076 Osnabrück</p>
+
+
+                        <p> 13.März 2019</p>
+
+                        <h1> <strong> Betreff: Gründe zur Studenwahl</strong></h1>
+
+                        <p>Sehr geehrte Frau Kuhlmann,</p>
+                        <p> BBeiliegend möchte Ich Ihnen gerne erläutern, aus welchen Gründen ich mich für den <br>
+                            Studiengang Medieninformatik eingeschrieben habe.
+                        </p>
+
+                        <!-- Vorwissen-->
+                        <h2> Vorwissen</h2>
+                        <p> Ich habe meinen Abschluss im Jahr 2018 an der SZUT Bremen erhalten. Schon dort hatte <br>
+                            ich starkes Interesse in folgenden Bereichen:
+                        </p>
+                        <ul>
+                            <li> Webentwicklung</li>
+                            <li> JavaSript entwicklung bis ES8</li>
+                            <li> Arbeiten mit React </li>
+                        </ul>
+                        <p> Das hat sich auch auf meine Noten in den Informatik und FNum ausgewirkt.</p>
+                        <p>Die Website der letzten besuchten Schule finden Sie unter
+                            <a href="https://www.szut.de/">
+                                <abbr title="Europaschule Schulzentrum SII Utbremen"> Szut.de</abbr>
+                            </a>.
+                        </p>
+                        <!-- Interessen-->
+                        <h2> Interessen</h2>
+                        <p> Meine Interessen im privaten Bereich in Verbindung mit meiner Entscheidung zum Studium <br>
+                            der Medieninformatik setzen sich wie folgt zusammen
+                        </p>
+
+                        <ol>
+                            <li> Interesse an der Webentwicklung</li>
+                            <li> Interesse am gestallten und Planen Von webseiten</li>
+                        </ol>
+
+                        <!-- Kenntnisse-->
+                        <h2> Kenntnisse</h2>
+                        <p>
+
+                            Ich habe 4 online kurse im bereich der Webentwicklung belegt.
+                        </p>
+                        <dl>
+                            <dt> Webentwicklung im Bereich meiner Ausbildung</dt>
+                            <dd> Ich habe mehrere Praktikas im bereich der Medieninformatik gemacht und eine <br>
+                                Abgeschlossene Berufsausbildung als<b> Mathematisch-Technischer-Assistent
+                                </b>Schwerpunkt <br>
+                                Wirtschaftswissenschaft und Wirtschaftsinformatik</dd>
+
+                            <dt> React und Node.js</dt>
+                            <dd> In meiner Freizeit habe ich mich einezeit lang mit der Backend entwicklung <br>
+                                mit <b> JavaSript und (Node.js)</b> befasst und viele keine webseiten geschrieben mit
+                                hilfe<br>
+                                von React im verbung mit kleinen NonSQL datenbanken.</dd>
+                        </dl>
+
+                        <p> Ich hatte mich bei mehreren Hochschulen für den bereich Medieninformatik beworben <br>und
+                            habe das
+                            Interesse an dem Studiengang wärend meiner Ausbildung bekommen</p>
+
+
+                        <p> Mit freundlichen Grüßen</p>
+
+                        <p> Paul Dieterich</p>
+
+                        <q>DO MORE</q>
+                    </div>
+                </div>
+            </div>
+            <div class="beschreibung">
+                <h1>Dokumentation zu Aufgabe 02 BriefHTML5</h1>
+
+                Formatierung eines Briefes in HTML5 unter Verwendung von Tags und Meta Daten mit dem VS Code Entwickelt,
+                Geprüft in Google Chrome und Firefox und in Validator von der w3c
+
+
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

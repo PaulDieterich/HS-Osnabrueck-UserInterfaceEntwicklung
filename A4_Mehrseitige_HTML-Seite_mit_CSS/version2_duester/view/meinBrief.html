@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Paul Dieterich">
+    <title> düster und gefährlich</title>
+    <!--<link rel="stylesheet" href="./../style/style.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+        @import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+        body {
+            position: fixed;
+            margin: 0;
+            background-color: rgb(21, 24, 35)
+        }
+
+        nav {
+            font-family: Dokdo;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            overflow: none;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        .nachRechts {
+            float: right;
+        }
+
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: flex;
+            transition: 0.2s;
+        }
+
+        nav li a:hover {
+            font-size: 2em;
+        }
+
+        main {
+            margin: 5em 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            justify-content: space-around;
+        }
+
+        #briefborder {
+            background-color: #fff;
+            overflow: auto;
+            height: 70vh;
+            border: 1px solid #000;
+            padding: 1em;
+
+        }
+
+        #brief {}
+
+        .container {
+            padding: 1em;
+            margin: 1em;
+            display: flex;
+            background-color: rgb(21, 24, 35);
+        }
+
+        #anschrift p,
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .beschreibung {
+
+            color: rgb(217, 215, 172);
+            min-width: 350px;
+            max-width: 40%;
+            padding: 1em;
+            font-family: Lato;
+        }
+
+        .beschreibung h1 {
+            font-family: 'Reenie Beanie';
+            color: rgb(223, 64, 64);
+            font-size: 3em;
+
+        }
+
+        .activ {
+            color: rgb(223, 64, 64);
+        }
+
+        table,
+        th,
+        td {
+            font-family: 'Reenie Beanie';
+            font-size: 1.25em;
+            color: rgb(223, 64, 64);
+            border: 1px solid #fff;
+            ;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        th {
+            font-family: 'Dokdo';
+            font-size: 1.5em;
+        }
+
+        td:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .leer {
+            border: none;
+        }
+
+        .leer:hover {
+            background-color: rgb(21, 24, 35);
+            ;
+        }
+
+        /* Style der drei buttons zum auswählen der designs*/
+        .button {
+            font-family: 'Dokdo';
+            cursor: pointer;
+            font-size: 1.25em;
+            padding: 0.5em;
+            margin: 1em;
+            background-color: black;
+            border: none;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        .button span a,
+        .button p {
+            text-decoration: none;
+            color: rgb(223, 64, 64);
+            ;
+            transition: 0.5s;
+        }
+
+        .button span a:active {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span {
+
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            color: rgb(223, 64, 64);
+            ;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li> <a href="index.html"> Home</a></li>
+                <li> <a href="steckbrief.html"> Steckbrief</a></li>
+                <li> <a class="activ" href="meinBrief.html"> Mein Brief</a></li>
+                <li> <a href="stundenplan.html"> Stundenplan</a></li>
+                <li> <a href="kontaktdaten.html"> Kontaktdaten</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+            <div id="briefborder">
+                <div id="brief">
+
+
+                    <p> <strong> Paul Dieterich</strong> <br>
+                        Schaumburger Straße 50<br>
+                        Bremen</p>
+
+                    <p> <strong> mail: <a href="mailto:paul.dieterich@hs-osnbabrueck.de"> Meine Email Adresse</a>
+                        </strong>
+                    </p>
+
+                    <br><br> <br>
+
+                    <p> <strong> Bettina Kuhlmann</strong><br>
+                        IxD lab, Room SD-108<br>
+                        Albrechtstr. 30<br>
+                        D-49076 Osnabrück</p>
+
+
+                    <p> 13.März 2019</p>
+
+                    <h1> <strong> Betreff: Gründe zur Studenwahl</strong></h1>
+
+                    <p>Sehr geehrte Frau Kuhlmann,</p>
+                    <p> BBeiliegend möchte Ich Ihnen gerne erläutern, aus welchen Gründen ich mich für den <br>
+                        Studiengang Medieninformatik eingeschrieben habe.
+                    </p>
+
+                    <!-- Vorwissen-->
+                    <h2> Vorwissen</h2>
+                    <p> Ich habe meinen Abschluss im Jahr 2018 an der SZUT Bremen erhalten. Schon dort hatte <br>
+                        ich starkes Interesse in folgenden Bereichen:
+                    </p>
+                    <ul>
+                        <li> Webentwicklung</li>
+                        <li> JavaSript entwicklung bis ES8</li>
+                        <li> Arbeiten mit React </li>
+                    </ul>
+                    <p> Das hat sich auch auf meine Noten in den Informatik und FNum ausgewirkt.</p>
+                    <p>Die Website der letzten besuchten Schule finden Sie unter
+                        <a href="https://www.szut.de/">
+                            <abbr title="Europaschule Schulzentrum SII Utbremen"> Szut.de</abbr>
+                        </a>.
+                    </p>
+                    <!-- Interessen-->
+                    <h2> Interessen</h2>
+                    <p> Meine Interessen im privaten Bereich in Verbindung mit meiner Entscheidung zum Studium <br>
+                        der Medieninformatik setzen sich wie folgt zusammen
+                    </p>
+
+                    <ol>
+                        <li> Interesse an der Webentwicklung</li>
+                        <li> Interesse am gestallten und Planen Von webseiten</li>
+                    </ol>
+
+                    <!-- Kenntnisse-->
+                    <h2> Kenntnisse</h2>
+                    <p>
+
+                        Ich habe 4 online kurse im bereich der Webentwicklung belegt.
+                    </p>
+                    <dl>
+                        <dt> Webentwicklung im Bereich meiner Ausbildung</dt>
+                        <dd> Ich habe mehrere Praktikas im bereich der Medieninformatik gemacht und eine <br>
+                            Abgeschlossene Berufsausbildung als<b> Mathematisch-Technischer-Assistent </b>Schwerpunkt
+                            <br>
+                            Wirtschaftswissenschaft und Wirtschaftsinformatik</dd>
+
+                        <dt> React und Node.js</dt>
+                        <dd> In meiner Freizeit habe ich mich einezeit lang mit der Backend entwicklung <br>
+                            mit <b> JavaSript und (Node.js)</b> befasst und viele keine webseiten geschrieben mit
+                            hilfe<br>
+                            von React im verbung mit kleinen NonSQL datenbanken.</dd>
+                    </dl>
+
+                    <p> Ich hatte mich bei mehreren Hochschulen für den bereich Medieninformatik beworben <br>und habe
+                        das
+                        Interesse an dem Studiengang wärend meiner Ausbildung bekommen</p>
+
+
+                    <p> Mit freundlichen Grüßen</p>
+
+                    <p> Paul Dieterich</p>
+
+                    <q>DO MORE</q>
+                </div>
+            </div>
+        </div>
+        <div class="beschreibung">
+            <h1>Dokumentation zu Aufgabe 02 BriefHTML5</h1>
+
+            Formatierung eines Briefes in HTML5 unter Verwendung von Tags und Meta Daten mit dem VS Code Entwickelt,
+            Geprüft in Google Chrome und Firefox und in Validator von der w3c
+
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formular</title>
+</head>
+
+<body>
+    <form action="http://www.example.com/subscribe.php" method="get>" <p>Hier stehen die Formularsteuerelemente</form>
+
+    <form action="http://www.example.com/login.php">
+        <p>Benutzername:
+            <input type:"text" name="username" size="15" maxlength="30" />
+        </p>
+    </form>
+    <hr>
+    <h2>Checkboxen</h2>
+
+    <form action="versand.php" method="get">
+        <div>
+            <p>Ich möchte bestellen:</b></p>
+            <input type="checkbox" name="essen" value="Spaghetti" />
+            Spaghetti<br />
+            <input type="checkbox" name="essen" value="pizza" /> Pizza<br />
+            <input type="checkbox" name="essen" value="tiramisu" /> Tiramisu
+        </div>
+    </form>
+    <hr>
+    <h2>Radiobuttons</h2>
+
+    <form action="versand.php" method="get">
+        <div>
+            <p>Ich möchte bestellen:</b></p>
+            <input type="radio" name="essen" value="Spaghetti" /> Spaghetti<br />
+            <input type="radio" name="essen" value="pizza" checked="checked" />
+            Pizza<br />
+            <input type="radio" name="essen" value="tiramisu" /> Tiramisu
+        </div>
+    </form>
+    <hr>
+    <h2>Auswahllisten</h2>
+
+    <form action="versand.php" method="get">
+        <div>
+            <select>
+                <option value="apfel">Apfel</option>
+                <option value="birne">Birne</option>
+                <option value="banane">Banane</option>
+                <option value="ananas" selected="selected">Ananas</option>
+                <option value="kiwi">Kiwi</option>
+            </select>
+        </div>
+    </form>
+    <hr>
+    <h2>Formular Button</h2>
+
+    <form action="versand.php" method="get">
+            <div>
+            <input type="text" name="name" value="" /><br /><br />
+            <input type="submit" name="versenden" value="versenden" />
+            <input type="reset" name="loeschen" value="abbrechen" />
+            </div>
+            </form>
+
+            <hr>
+            <h2>Klick Button</h2>
+
+            <form action="versand.php" method="get">
+                    <div>
+                    <input type="button" value="Klick mich" onclick="alert('Hallo Welt!');" />
+                    </div>
+                    </form>
+    
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> verspielt und romantisch</title>
+    <!--<link rel="stylesheet" href="./../style/style.css"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+        @import url('https://fonts.googleapis.com/css?family=Neucha');
+
+        body {
+            position: fixed;
+            margin: 0;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-around;
+            margin: 4vh 3vw 3vh 3vw;
+            height: 93vh;
+            width: 94vw;
+            background-color: #fffce9
+        }
+
+        nav {
+            font-family: 'Open Sans Condensed';
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            overflow: none;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: flex;
+            transition: 0.2s;
+        }
+
+        nav li:nth-child(1):hover {
+            background: rgb(99, 1, 1);
+
+        }
+
+        nav li:nth-child(2):hover {
+            background: rgb(99, 89, 1);
+
+        }
+
+        nav li:nth-child(3):hover {
+            background: rgb(1, 99, 6);
+
+        }
+
+        nav li:nth-child(4):hover {
+            background: rgb(1, 96, 99);
+
+        }
+
+        nav li:nth-child(5):hover {
+            background: rgb(60, 1, 99);
+
+        }
+
+        nav li a:hover {
+            font-size: 2em;
+        }
+
+
+        .activ {
+            color: rgba(255, 72, 112, 0.822);
+        }
+
+        main {
+            background-image: linear-gradient(to top, #f54291, #ff78ae, #ffa0d2);
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        #briefborder {
+            background-color: #fff;
+            overflow: auto;
+            height: 70vh;
+            border: 1px solid #000;
+            padding: 1em;
+        }
+
+        .container {
+            padding: 1em;
+            margin: 1em;
+            background-color: #fffce9
+        }
+
+        #anschrift p,
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .beschreibung {
+            color: rgb(0, 0, 0);
+            min-width: 350px;
+            max-width: 40%;
+            padding: 1em;
+            font-family: Lato;
+        }
+
+        .beschreibung h1 {
+            font-family: 'Neucha';
+            color: #000;
+
+
+        }
+
+
+        table,
+        th,
+        td {
+            font-family: 'Lato';
+
+            color: #000;
+            border: 1px solid rgb(61, 61, 61);
+            ;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        th {
+            font-family: 'Neucha';
+            font-size: 1.5em;
+        }
+
+        td:hover {
+            color: #fff;
+        }
+
+        .MATH1:hover {
+            background-color: #F12B6B
+        }
+
+        .PROG1:hover {
+            background-color: #FF467E
+        }
+
+        .GUI:hover {
+            background-color: #FD94B4
+        }
+
+        .TGMI:hover {
+            background-color: #F6C7C7
+        }
+
+        .leer {
+            border: none;
+        }
+
+        .leer:hover {
+            color: black;
+            background-color: #fffce9
+        }
+
+        #lieblingsfach {
+            padding: 0.5em;
+            margin: 0.1em;
+            background: rgb(1, 96, 99);
+        }
+
+        /* Style der drei buttons zum auswählen der designs*/
+
+        #buttonGruppe .button:nth-child(1) {
+            background: rgb(99, 1, 1);
+        }
+
+        #buttonGruppe .button:nth-child(2) {
+            background: rgb(99, 89, 1);
+        }
+
+        #buttonGruppe .button:nth-child(3) {
+            background: rgb(1, 96, 99);
+        }
+
+        .button {
+            font-family: 'Open Sans Condensed';
+            cursor: pointer;
+            font-size: 1.25em;
+            padding: 0.5em;
+            margin: 1em;
+            border: none;
+            outline: none;
+
+        }
+
+        .button span a,
+        .button p {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span a:active {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span {
+
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            color: #000;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li> <a href="index.html"> Home</a></li>
+                <li> <a href="steckbrief.html"> Steckbrief</a></li>
+                <li> <a href="meinBrief.html"> Mein Brief</a></li>
+                <li> <a href="stundenplan.html"> Stundenplan</a></li>
+                <li> <a class="activ" href="kontaktdaten.html"> Kontaktdaten</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="beschreibung">
+                <div>
+                    <h1> Impressum</h1>
+                    <div id="anschrift">
+                        <p> Paul Dieterich <br>
+                            Schaumburger Straße 50 <br>
+                            28205 Bremen <br>
+                        </p>
+                        <a href="mailto:paul.dieterich@hs-osnabrueck.de"> paul.dieterich@hs-osnabrück.de </a>
+                    </div>
+
+                </div>
+                <div>
+                </div>
+                <div>
+                    <h1> Anfahrt</h1>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.0658106424676!2d8.843582480376247!3d53.073091102942584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b127ee24ed1ad7%3A0xe5f12e27dae92c9d!2sSchaumburger+Str.%2C+28205+Bremen!5e0!3m2!1sde!2sde!4v1553705268644"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="beschreibung">
+                <h1>Dokumentation zu Aufgabe 03 Mehrseitige HTML-Seite</h1>
+
+                Erstellung einer Mehrseitige Webseite in HTML5 unter Verwendung von Elementen und Tags und Einbringung
+                eines
+                Bildes.
+                Mit dem VS Code Entwickelt, Geprüft in Google Chrome und Firefox und in Validator von der w3c überprüft.
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

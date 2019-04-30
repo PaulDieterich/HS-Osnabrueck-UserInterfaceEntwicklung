@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="./../style/style.css">-->
+
+    <title> düster und gefährlich</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+        @import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+        body {
+            position: fixed;
+            margin: 0;
+            background-color: rgb(21, 24, 35)
+        }
+
+        nav {
+            font-family: Dokdo;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            overflow: none;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        .nachRechts {
+            float: right;
+        }
+
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: flex;
+            transition: 0.2s;
+        }
+
+        nav li a:hover {
+            font-size: 2em;
+        }
+
+        main {
+            margin: 5em 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            justify-content: space-around;
+        }
+
+        #briefborder {
+            background-color: #fff;
+            overflow: auto;
+            height: 70vh;
+            border: 1px solid #000;
+            padding: 1em;
+
+        }
+
+        #brief {}
+
+        .container {
+            padding: 1em;
+            margin: 1em;
+            display: flex;
+            background-color: rgb(21, 24, 35);
+        }
+
+        #anschrift p,
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .beschreibung {
+
+            color: rgb(217, 215, 172);
+            min-width: 350px;
+            max-width: 40%;
+            padding: 1em;
+            font-family: Lato;
+        }
+
+        .beschreibung h1 {
+            font-family: 'Reenie Beanie';
+            color: rgb(223, 64, 64);
+            font-size: 3em;
+
+        }
+
+        .activ {
+            color: rgb(223, 64, 64);
+        }
+
+        table,
+        th,
+        td {
+            font-family: 'Reenie Beanie';
+            font-size: 1.25em;
+            color: rgb(223, 64, 64);
+            border: 1px solid #fff;
+            ;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        th {
+            font-family: 'Dokdo';
+            font-size: 1.5em;
+        }
+
+        td:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .leer {
+            border: none;
+        }
+
+        .leer:hover {
+            background-color: rgb(21, 24, 35);
+            ;
+        }
+
+        /* Style der drei buttons zum auswählen der designs*/
+        .button {
+            font-family: 'Dokdo';
+            cursor: pointer;
+            font-size: 1.25em;
+            padding: 0.5em;
+            margin: 1em;
+            background-color: black;
+            border: none;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        .button span a,
+        .button p {
+            text-decoration: none;
+            color: rgb(223, 64, 64);
+            ;
+            transition: 0.5s;
+        }
+
+        .button span a:active {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .button span {
+
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            color: rgb(223, 64, 64);
+            ;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li> <a href="index.html"> Home</a></li>
+                <li> <a href="steckbrief.html"> Steckbrief</a></li>
+                <li> <a href="meinBrief.html"> Mein Brief</a></li>
+                <li> <a class="activ" href="stundenplan.html"> Stundenplan</a></li>
+                <li> <a href="kontaktdaten.html"> Kontaktdaten</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <div id="table">
+                    <table>
+                        <tr>
+                            <th class="leer"></th>
+                            <th> Montag</th>
+                            <th> Dienstag</th>
+                            <th> Mittwoch</th>
+                            <th> Donnerstag</th>
+                            <th> Freitag</th>
+                        </tr>
+                        <tr>
+                            <th> 8:00</th>
+                            <td class="leer"></td>
+                            <td rowspan="2"> Technische Grundlagen MI</td>
+                            <td rowspan="2"> Grundlagen User Interface</td>
+                            <td rowspan="2"> Technische Grundlagen MI</td>
+                        </tr>
+                        <tr>
+                            <th> 9:00</th>
+                        </tr>
+                        <tr>
+                            <th> 10:00</th>
+                            <td rowspan="2"> Mahte Übung</td>
+                            <td rowspan="2"> Mathematik I</td>
+                            <td rowspan="2"> Mathematik I</td>
+                            <td rowspan="2"> Mathematik I</td>
+                            <td class="leer"></td>
+                        </tr>
+                        <tr>
+                            <th> 11:00</th>
+                        </tr>
+                        <tr>
+                            <th> 12:00</th>
+                            <td rowspan="2"> Programmierung I</td>
+                            <td rowspan="2"> Programmierung I Tutorum</td>
+                            <td rowspan="2"> Grundlagen User Interface Praktikum</td>
+                            <td rowspan="2"> Programmierung I </td>
+                            <td rowspan="4"> Orientierung und Methoden</td>
+                        </tr>
+                        <tr>
+                            <th> 13:00</th>
+
+                        </tr>
+                        <tr>
+                            <th> 14:00</th>
+                            <td rowspan="2"> Programmierung Praktikum</td>
+                            <td rowspan="2"> Technische Grundlagen MI </td>
+                            <td class="leer"> </td>
+                            <td rowspan="2"> Programmierung Praktikum</td>
+
+                        </tr>
+                        <tr>
+                            <th> 15:00</th>
+                        </tr>
+                        <tr>
+                            <th> 16:00</th>
+                        </tr>
+                        <tr>
+                            <th> 17:00</th>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <button class="button" onClick="alert('User interface entwicklung')">
+                        <p>meinem Lieblingsfach</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="beschreibung">
+            <h1> Dokumentation zu Aufgabe 02 BriefHTML5</h1>
+
+
+            Formatierung eines Briefes in HTML5 unter Verwendung von Tags und Meta Daten mit dem VS Code Entwickelt,
+            Geprüft in Google Chrome und Firefox und in Validator von der w3c
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

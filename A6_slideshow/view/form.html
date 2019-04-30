@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Paul Dieterich">
+  <title>Aufgabe 6 Form</title>
+  <link rel="stylesheet" href="./../style/form.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul id="menu">
+        <li> <a href="./../index.html"> Home</a></li>
+        <li> <a href="steckbrief.html"> Steckbrief</a></li>
+        <li> <a href="meinBrief.html"> Mein Brief</a></li>
+        <li> <a href="stundenplan.html"> Stundenplan</a></li>
+        <li> <a class="activ" href="form.html"> form</a></li>
+        <li> <a href="slideshow.html"> Slideshow</a></li>
+        <li> <a href="kontaktdaten.html"> Kontaktdaten</a> </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+
+
+
+      <h1> Informatik Arbeitskreis</h1>
+      <p> Wir führen im Laufe des Jahres eine Reihe vin Informatik-Arbeitskreisen und Symposien durch.</p>
+      <p> Bitte beachten Sie, das die folgenden Veranstaltungen für Mitglieder kostenlos sind</p>
+      <ul>
+        <li> Informatik/ Technische Informatik</li>
+        <li> Medieninformatik</li>
+        <li> Informationstechnologie</li>
+      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th> </th>
+            <th> SD002</th>
+            <th> SI38</th>
+            <th> SD100</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th> Informatik/Technische Informatik</th>
+            <td>
+              <p>Montag, 06.Mai 2019</p>
+              <p>11-14:00Uhr </p>
+
+            </td>
+            <td>
+              <p>Dienstag, 07.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Donnerstag, 08.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+          </tr>
+          <tr>
+            <th> Medieninformatik</th>
+            <td>
+              <p>Montag, 06.Mai 2019 </p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Dienstag, 07.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Donnerstag, 08.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+          </tr>
+          <tr>
+            <th> Informationstechnologie</th>
+            <td>
+              <p>Montag, 13.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Dienstag, 14.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Donnerstag, 15.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+          </tr>
+          <tr>
+            <th> Natural Death: An Exploration</th>
+            <td>
+              <p>Montag, 13.Mai 2019 </p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Dienstag, 14.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+            <td>
+              <p>Donnerstag, 15.Mai 2019</p>
+              <p>11-14:00Uhr</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <form>
+        <fieldset>
+          <legend> Registrieren für weitere Informationen</legend>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="name" name="name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="email" id="email" name="email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Veranstaltungen</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">SD002</option>
+                <option value="canada">SI38</option>
+                <option value="usa">SD100</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Sind Sie Mitglied</label>
+            </div>
+            <div class="col-75">
+              <label for="ja">Ja</label>
+              <input type="radio" id="ja" name="Mitglied">
+              <label for="nein"> nein</label>
+              <input type="radio" id="nein" name="Mitglied">
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" id="submit" name="submit" onClick="alert('User wurde hinzugefügt')">
+      </form>
+    </div>
+    <div class="beschreibung">
+      <h1>Dokumentation zu Aufgabe 05</h1>
+
+      Formatierung einer Tabelle und eines Formfeldes unter Verwendung von Form und Tabellen Tagsmit dem VS Code
+      Entwickelt,
+      Geprüft in Google Chrome und Firefox und in Validator von der w3c
+
+    </div>
+  </main>
+</body>
+
+
+</html>
