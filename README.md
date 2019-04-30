@@ -7,3 +7,4 @@ Nicht zum Schummeln zurverfügung gestellt nur zur vergleichen.
 Auf alle Projekte habe ich die volle Punktzahl bekommen.
 Für nichtbestehen und schlechte noten übernehme ich keine verantwortung.
 Bei finden von fehlern bitte gerne melden. 
+Alle Bildrechte liegen bei mir (Paul Dieterich). 
